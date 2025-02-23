@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import SidebarUser from '../../../sidebarUser/SidebarUser';
-import BotWidgetUser from './bottomUser/BotWidgetUser';
-import TopWidgetUser from './topUser/TopWidgetUser';
 import { Logout as LogoutIcon, PermIdentity } from '@mui/icons-material';
 
 export default function HomeUser({ setAuth }) {
@@ -75,8 +73,33 @@ export default function HomeUser({ setAuth }) {
           </span>
         </div>
 
-        <TopWidgetUser />
-        <BotWidgetUser />
+        {/* Bienvenida y funcionalidades de préstamos */}
+        <div className="mt-8 p-6 bg-gray-100 rounded-lg shadow-md">
+          <h3 className="text-2xl font-semibold text-center text-gray-800 mb-4">¡Solicita tu préstamo ahora!</h3>
+          <p className="text-md text-gray-600 text-center mb-6">
+            En nuestra institución, te ofrecemos soluciones financieras adaptadas a tus necesidades. Accede fácilmente a préstamos con condiciones favorables, rapidez y seguridad.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <div className="bg-red-500 text-white rounded-lg p-6">
+              <h4 className="font-semibold text-xl mb-3">Préstamos rápidos y fáciles</h4>
+              <p>Realiza tu solicitud de préstamo en minutos, con respuesta inmediata. ¡Sin complicaciones ni papeleo!</p>
+            </div>
+            <div className="bg-red-500 text-white rounded-lg p-6">
+              <h4 className="font-semibold text-xl mb-3">Tasas de interés competitivas</h4>
+              <p>Obtén préstamos con tasas de interés bajas, lo que te permitirá pagar cómodamente a lo largo del tiempo.</p>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <Link
+              to="/LoansUser"
+              className="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition"
+            >
+              ¡Solicita tu préstamo ahora!
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

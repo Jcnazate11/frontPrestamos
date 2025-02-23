@@ -100,7 +100,7 @@ const LoansUser = ({ setAuth }) => {
           {/* TÍTULO */}
           <div className='flex items-center justify-between border-y-2 mt-5'>
             <h3 className='text-lg font-medium leading-6 text-gray my-2 px-1 py-2'>
-              Transacciones de Préstamos
+              Realizar un Préstamo
             </h3>
             <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 mb-2 rounded focus:outline-none focus:shadow-outline w-auto mt-2'>
               <Link to='/addLoanUser'>Agregar Préstamo</Link>
@@ -117,11 +117,9 @@ const LoansUser = ({ setAuth }) => {
                   <th className='w-1/6 px-1 py-2 text-gray-600'>Tipo de Préstamo</th>
                   <th className='w-1/6 px-1 py-2 text-gray-600'>Saldo Pendiente</th>
                   <th className='w-1/6 px-4 py-2 text-gray-600'>Préstamo Bruto</th>
-                  <th className='w-1/6 px-4 py-2 text-gray-600'>Amortización</th>
                   <th className='w-1/6 px-4 py-2 text-gray-600'>Plazo</th>
-                  <th className='w-1/6 px-4 py-2 text-gray-600'>Fecha de Desembolso</th>
+                  <th className='w-1/6 px-4 py-2 text-gray-600'>Fecha de Vencimiento</th>
                   <th className='w-1/6 px-4 py-2 text-gray-600'>Estado</th>
-                  <th className='w-1/1 px-4 py-2 text-gray-600'>Acciones</th>
                 </tr>
               </thead>
               <tbody>
